@@ -1,3 +1,3 @@
-module github.com/keien-nishikawa/gohub
+module gohub
 
 go 1.18
