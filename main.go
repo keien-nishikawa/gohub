@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"./lib/footer"
+	"gohub/lib/footer"
 )
 
 func main() {
