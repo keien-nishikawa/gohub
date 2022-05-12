@@ -2,10 +2,16 @@ package main
 
 import (
 	"fmt"
-	"gohub/controller"
+	"gohub/router"
+	"log"
+	"net/http"
 )
 
 func main() {
   fmt.Printf("Hello world\n")
-  controller.FetchAllUser()
+	router.UserRouter()
+	err := http.ListenAndServe(":8080",nil)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
