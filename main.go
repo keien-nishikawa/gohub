@@ -2,11 +2,10 @@ package main
 
 import (
 	"fmt"
-
-	"github.com/keien-nishikawa/gohub/lib/footer"
+	"gohub/controller"
 )
 
 func main() {
-    fmt.Printf("Hello world\n")
-    footer.Foo()
+  fmt.Printf("Hello world\n")
+  controller.FetchAllUser()
 }

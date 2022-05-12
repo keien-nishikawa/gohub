@@ -1,11 +1,13 @@
 package controller
 
-import "log"
+import (
+	"gohub/model"
+	"log"
+)
 
-func Foo() {
-    log.Print("Hello world from foo!")
+
+func FetchAllUser(){
+	log.Print("fetchAll users")
+	model.Username()
 }
 
-func Bar() {
-    log.Print("Hello world from bar!")
-}
