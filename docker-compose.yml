@@ -9,4 +9,4 @@ services:
     ports: # ホストOSのポートとコンテナのポートをつなげる
       - "8080:8080"
     volumes:
-      - ./app:/go/src/gohub_api # マウントディレクトリ
+      - .:/go/src/app # マウントディレクトリ
