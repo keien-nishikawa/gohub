@@ -23,4 +23,4 @@ EXPOSE 8080
 
 # hot realod config: Airをインストールし、コンテナ起動時に実行する
 RUN go install github.com/cosmtrek/air@latest
-CMD ["air", "go", "run", "main.go"]
+CMD ["air", "go", "run", "server.go"]

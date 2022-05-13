@@ -2,7 +2,7 @@ package controller
 
 import (
 	"fmt"
-	"gohub/model"
+	"gohub/cmd/model"
 	"log"
 	"net/http"
 )

@@ -2,7 +2,7 @@ package router
 
 import (
 	"fmt"
-	"gohub/controller"
+	"gohub/cmd/controller"
 	"net/http"
 )
 

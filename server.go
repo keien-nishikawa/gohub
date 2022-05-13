@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"gohub/router"
+	"gohub/cmd/router"
 	"log"
 	"net/http"
 )
