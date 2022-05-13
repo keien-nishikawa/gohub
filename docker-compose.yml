@@ -1,0 +1,12 @@
+version: "3"
+services:
+  gohub_api:
+    container_name: gohub_api # サービス名
+    image: gohub_api # image名
+    build: . # ビルドに使うDockerfileの場所
+    tty: true # コンテナの永続化
+    # command: go run main.go
+    ports: # ホストOSのポートとコンテナのポートをつなげる
+      - "8080:8080"
+    volumes:
+      - ./app:/go/src/gohub_api # マウントディレクトリ
