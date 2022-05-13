@@ -1,0 +1,8 @@
+FROM scratch as prod
+
+ENV ROOT=/go/src/app
+WORKDIR ${ROOT}
+COPY --from=builder ${ROOT}/binary ${ROOT}
+
+EXPOSE 8080
+CMD ["/go/src/app/binary"]
