@@ -7,9 +7,9 @@ import (
 	_ "github.com/lib/pq"
 )
 const (
-		host     = "localhost"
+		host     = "db"
 		port     = 5432
-		user     = "postgres"
+		user     = "gohub"
 		password = "gohub_dev_password"
 		dbname   = "gohub_dev"
 		)

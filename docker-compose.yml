@@ -5,9 +5,10 @@ services:
     container_name: gohub_db
     volumes:
       - psgl_data:/var/lib/postgresql/data
+      - ./script:/docker-entrypoint-initdb.d
     environment:
-      POSTGRES_USER: root
-      POSTGRES_PASSWORD: password
+      POSTGRES_USER: gohub
+      POSTGRES_PASSWORD: gohub_dev_password
     ports:
       - 5433:5432
   gohub_api:
@@ -24,16 +25,5 @@ services:
       - db
     volumes:
       - .:/go/src/app # マウントディレクトリ
-    # database.yml用の環境変数
-    environment:
-      TZ: Asia/Tokyo
-      DEVELOPMENT_DB_USER_NAME: root
-      DEVELOPMENT_DB_HOST: db
-      DEVELOPMENT_DB_NAME: gohub_dev
-      DEVELOPMENT_DB_PASSWORD: gohub_dev_password
-      TEST_DB_USER_NAME: root
-      TEST_DB_HOST: db
-      TEST_DB_NAME: gohub_dev_test
-      TEST_DB_PASSWORD: gohub_dev_test_password
 volumes:
   psgl_data:
