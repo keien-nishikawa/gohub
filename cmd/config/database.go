@@ -14,6 +14,7 @@ const (
     dbname   = "gohub_dev"
     )
 
+// NOTE: https://www.calhoun.io/connecting-to-a-postgresql-database-with-gos-database-sql-package/
 func ConnectionDatabase() {
   psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+
     "password=%s dbname=%s sslmode=disable",
