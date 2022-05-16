@@ -1,13 +1,39 @@
 version: "3"
 services:
+  db:
+    image: postgres
+    container_name: clubstack_db
+    volumes:
+      - psgl_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: password
+    ports:
+      - 5433:5432
   gohub_api:
     container_name: gohub_api # サービス名
     image: gohub_api # image名
-    tty: true # コンテナの永続化
+    stdin_open: true # コンテナの標準入力をオープンしたままにする
+    tty: true # コンテナに疑似TTYを割り当てる
     ports: # ホストOSのポートとコンテナのポートをつなげる
       - "8080:8080"
     build:
       context: .
       dockerfile: ./docker/Dockerfile
+    depends_on:
+      - db
     volumes:
       - .:/go/src/app # マウントディレクトリ
+    # database.yml用の環境変数
+    environment:
+      TZ: Asia/Tokyo
+      DEVELOPMENT_DB_USER_NAME: root
+      DEVELOPMENT_DB_HOST: db
+      DEVELOPMENT_DB_NAME: gohub_dev
+      DEVELOPMENT_DB_PASSWORD: gohub_dev_password
+      TEST_DB_USER_NAME: root
+      TEST_DB_HOST: db
+      TEST_DB_NAME: gohub_dev_test
+      TEST_DB_PASSWORD: gohub_dev_test_password
+volumes:
+  psgl_data:
