@@ -3,11 +3,12 @@ services:
   db:
     image: postgres
     container_name: gohub_db
+    command: -c 'config_file=/etc/postgresql/postgresql.conf'
     volumes:
       - psgl_data:/var/lib/postgresql/data
       - ./script:/docker-entrypoint-initdb.d # 「script/01_initialize.sql」を実行
+      - ./config/postgresql.conf:/etc/postgresql/postgresql.conf
     environment:
-      POSTGRES_USER: gohub
       POSTGRES_PASSWORD: gohub_dev_password
     ports:
       - 5433:5432
