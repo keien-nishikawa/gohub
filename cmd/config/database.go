@@ -7,27 +7,27 @@ import (
 	_ "github.com/lib/pq"
 )
 const (
-    host     = "localhost"
-    port     = 5432
-    user     = "postgres"
-    password = "gohub_dev_password"
-    dbname   = "gohub_dev"
-    )
+		host     = "localhost"
+		port     = 5432
+		user     = "postgres"
+		password = "gohub_dev_password"
+		dbname   = "gohub_dev"
+		)
 
 // NOTE: https://www.calhoun.io/connecting-to-a-postgresql-database-with-gos-database-sql-package/
 func ConnectionDatabase() {
-  psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+
-    "password=%s dbname=%s sslmode=disable",
-    host, port, user, password, dbname)
-  db, err := sql.Open("postgres", psqlInfo)
-  if err != nil {
-    panic(err)
-  }
-  defer db.Close()
+	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+
+		"password=%s dbname=%s sslmode=disable",
+		host, port, user, password, dbname)
+	db, err := sql.Open("postgres", psqlInfo)
+	if err != nil {
+		panic(err)
+	}
+	defer db.Close()
 
-  err = db.Ping()
-  if err != nil {
-    panic(err)
-  }
-  fmt.Println("Successfully connected!")
+	err = db.Ping()
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println("Successfully connected!")
 }
