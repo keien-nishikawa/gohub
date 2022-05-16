@@ -5,7 +5,7 @@ services:
     container_name: gohub_db
     volumes:
       - psgl_data:/var/lib/postgresql/data
-      - ./script:/docker-entrypoint-initdb.d
+      - ./script:/docker-entrypoint-initdb.d # 「script/01_initialize.sql」を実行
     environment:
       POSTGRES_USER: gohub
       POSTGRES_PASSWORD: gohub_dev_password
