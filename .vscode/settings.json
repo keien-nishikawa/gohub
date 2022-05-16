@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["gohub"],
+  "cSpell.words": ["gohub", "dbname", "psqlInfo"],
   "[go]": {
     "editor.tabSize": 2,
     "editor.insertSpaces": false,
