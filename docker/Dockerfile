@@ -20,6 +20,8 @@ COPY go.mod go.sum ./
 RUN go mod download
 # コンテナのポートを設定
 EXPOSE 8080
+# GOPATHの設定
+ENV GOPATH $GOPATH:$HOME/go
 # migrate tool
 RUN go install github.com/pressly/goose/v3/cmd/goose@latest
 # hot realod config: Airをインストールし、コンテナ起動時に実行する
