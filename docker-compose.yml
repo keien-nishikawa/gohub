@@ -13,8 +13,6 @@ services:
       TZ: Asia/Tokyo
     ports:
       - 5433:5432
-    networks:
-      - app-net
   gohub_api:
     container_name: gohub_api # サービス名
     image: gohub_api # image名
@@ -31,13 +29,7 @@ services:
       - .env
     volumes:
       - .:/go/src/app # マウントディレクトリ
-    networks:
-      - app-net
     environment:
       TZ: Asia/Tokyo
-# コンテナ間の通信設定にはネットワーク機能を使う必要がある
-networks:
-  app-net:
-    driver: bridge
 volumes:
   psgl_data:
