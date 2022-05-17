@@ -6,6 +6,7 @@ CREATE TABLE gohub_user (
   last_name varchar(30),
   first_name varchar(30),
   age int
+)
 -- +goose StatementEnd
 
 -- +goose Down
