@@ -30,7 +30,7 @@ services:
     depends_on:
       - db
     restart: always
-  # API Aplication
+  # API Application
   # http://localhost:8080
   gohub_api:
     container_name: gohub_api # サービス名

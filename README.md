@@ -8,11 +8,20 @@ Go のバージョンは 1.18
 
 ## Develop Flow
 
+### Commands
+
 ```bash
 docker compose build
 docker volume create pgadmin4_volume
 docker volume up
 ```
+
+### URL
+
+**SQL Client Tool**
+http://localhost:8000
+**API Application**
+http://localhost:8080
 
 ## Docker
 
