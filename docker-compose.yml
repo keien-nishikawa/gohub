@@ -1,5 +1,6 @@
 version: "3"
 services:
+  # postgres database
   db:
     image: postgres
     container_name: gohub_db
@@ -13,6 +14,24 @@ services:
       TZ: Asia/Tokyo
     ports:
       - 5433:5432
+  # SQL client tool
+  # http://localhost:8000
+  pgadmin4:
+    image: dpage/pgadmin4:5.0
+    container_name: pgadmin4
+    ports:
+      - 8000:80
+    volumes:
+      - pgadmin4_volume:/var/lib/pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: gohub.api@sample.com
+      PGADMIN_DEFAULT_PASSWORD: gohub_password
+    hostname: pgadmin4
+    depends_on:
+      - db
+    restart: always
+  # API Aplication
+  # http://localhost:8080
   gohub_api:
     container_name: gohub_api # サービス名
     image: gohub_api # image名
@@ -33,3 +52,5 @@ services:
       TZ: Asia/Tokyo
 volumes:
   psgl_data:
+  pgadmin4_volume:
+    external: true

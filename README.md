@@ -6,6 +6,14 @@ Go で Web API を書くための下地プロジェクトです。
 フレームワークは`net/http`を利用するつもりです。
 Go のバージョンは 1.18
 
+## Develop Flow
+
+```bash
+docker compose build
+docker volume create pgadmin4_volume
+docker volume up
+```
+
 ## Docker
 
 ### 「gohub api」のコンテナにアクセスする方法
