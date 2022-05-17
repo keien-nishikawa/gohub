@@ -20,8 +20,6 @@ COPY go.mod go.sum ./
 RUN go mod download
 # コンテナのポートを設定
 EXPOSE 8080
-ENV GOOSE_DRIVER=postgres
-ENV GOOSE_DBSTRING="user=gohub_db dbname=postgres sslmode=disable"
 # migrate tool
 RUN go install github.com/pressly/goose/v3/cmd/goose@latest
 # hot realod config: Airをインストールし、コンテナ起動時に実行する
