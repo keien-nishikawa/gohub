@@ -16,7 +16,7 @@ docker exec -it gohub_api /bin/sh
 docker exec -it gohub_api /bin/bash
 ```
 
-## 「gohub_db」 のコンテナにアクセスする方法
+### 「gohub_db」 のコンテナにアクセスする方法
 
 ```bash
  # 矢印キーが効かないので「bin/bash」で入った方がいい
@@ -25,4 +25,10 @@ docker exec -it gohub_db /bin/bash
 
 # psqlに入る
 psql -h localhost -U postgres
+```
+
+### 環境変数を確認
+
+```bash
+docker exec gohub_api env
 ```
