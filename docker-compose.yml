@@ -10,14 +10,16 @@ services:
       - ./config/postgresql.conf:/etc/postgresql/postgresql.conf
     environment:
       POSTGRES_PASSWORD: gohub_dev_password
+      TZ: Asia/Tokyo
     ports:
       - 5433:5432
+    networks:
+      - app-net
   gohub_api:
     container_name: gohub_api # サービス名
     image: gohub_api # image名
     stdin_open: true # コンテナの標準入力をオープンしたままにする
     tty: true # コンテナに疑似TTYを割り当てる
-    TZ: "Asia/Tokyo" # timezoneの設定
     ports: # ホストOSのポートとコンテナのポートをつなげる
       - "8080:8080"
     build:
@@ -29,5 +31,13 @@ services:
       - .env
     volumes:
       - .:/go/src/app # マウントディレクトリ
+    networks:
+      - app-net
+    environment:
+      TZ: Asia/Tokyo
+# コンテナ間の通信設定にはネットワーク機能を使う必要がある
+networks:
+  app-net:
+    driver: bridge
 volumes:
   psgl_data:
