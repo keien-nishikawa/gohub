@@ -17,6 +17,7 @@ services:
     image: gohub_api # image名
     stdin_open: true # コンテナの標準入力をオープンしたままにする
     tty: true # コンテナに疑似TTYを割り当てる
+    TZ: "Asia/Tokyo" # timezoneの設定
     ports: # ホストOSのポートとコンテナのポートをつなげる
       - "8080:8080"
     build:
