@@ -1,6 +1,6 @@
 # ignore build files
 tmp
-log
+# log
 # ignore generate files to run 「cosmtrek/air」
 app
 .env
