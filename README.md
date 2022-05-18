@@ -39,6 +39,7 @@ http://localhost:8080
       - Username: postgres
       - Password: gohub_dev_password
       - Save Password: check <= as you like, but recommend to check
+5. done
 
 ## Docker
 
