@@ -1,0 +1,21 @@
+2022/05/18 20:53:44 /go/src/app/cmd/controller/user.go:18: test start.
+2022/05/18 20:58:56 /go/src/app/cmd/controller/user.go:15: fetchAllUser
+2022/05/18 20:58:56 /go/src/app/cmd/controller/user.go:16: username: keien-nishikawa
+2022/05/18 20:58:58 /go/src/app/cmd/controller/user.go:15: fetchAllUser
+2022/05/18 20:58:58 /go/src/app/cmd/controller/user.go:16: username: keien-nishikawa
+2022/05/18 20:59:10 /go/src/app/cmd/controller/user.go:15: fetchAllUser
+2022/05/18 20:59:10 /go/src/app/cmd/controller/user.go:16: username: keien-nishikawa
+2022/05/18 20:59:28 /go/src/app/cmd/controller/user.go:15: fetchAllUser
+2022/05/18 20:59:28 /go/src/app/cmd/controller/user.go:16: fetchAllUser
+2022/05/18 20:59:28 /go/src/app/cmd/controller/user.go:17: username: keien-nishikawa
+2022/05/18 20:59:53 /go/src/app/cmd/controller/user.go:17: fetchAllUser
+2022/05/18 20:59:53 /go/src/app/cmd/controller/user.go:18: username: keien-nishikawa
+2022/05/18 21:00:56 /go/src/app/cmd/controller/user.go:17: fetchAllUser
+2022/05/18 21:00:56 /go/src/app/cmd/controller/user.go:18: username: keien-nishikawa
+2022/05/18 21:23:04 /go/src/app/cmd/util/logo.go:11: fetchAllUser
+2022/05/18 21:23:04 /go/src/app/cmd/util/logo.go:11: username: keien-nishikawa
+2022/05/18 21:25:11 /go/src/app/cmd/controller/user.go:17: fetchAllUser
+2022/05/18 21:25:11 /go/src/app/cmd/controller/user.go:18: username: keien-nishikawa
+2022/05/18 21:25:25 /go/src/app/cmd/controller/user.go:15: fetchAllUser
+2022/05/18 21:25:25 /go/src/app/cmd/controller/user.go:16: username: keien-nishikawa
+2022/05/18 21:26:03 /go/src/app/cmd/controller/user.go:15: fetchAllUser:username: keien-nishikawa

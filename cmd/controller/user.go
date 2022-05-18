@@ -10,14 +10,14 @@ import (
 
 
 func FetchAllUser(w http.ResponseWriter, r *http.Request){
-	log.Print("fetchAll users")
-  fmt.Fprintf(w, "fetchAll controller")
-	model.Username()
+	var username string  = model.Username()
+	fmt.Fprintf(w, "fetchAll controller")
+	log.Println("fetchAllUser:" + username)
 	db.ConnectionDatabase()
 }
 
 func FetchUser(w http.ResponseWriter, r *http.Request){
-	log.Print("fetch user")
-  fmt.Fprintf(w, "fetchAll controller")
-	model.Username()
+	var username string  = model.Username()
+	fmt.Fprintf(w, "fetchUser controller")
+	log.Println("fetchUser" + username)
 }

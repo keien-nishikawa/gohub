@@ -8,10 +8,12 @@ import (
 )
 
 func main() {
+	// config logging
+	util.LoggingSettings("./log/develop.log")
+	// config routeing
 	router.SetRouter()
+	// error handling
  	err := http.ListenAndServe(":8080",nil)
-	util.LoggingSettings("develop.log")
-	log.Println("test start.")
 	if err != nil {
 		log.Fatal(err)
 	}
