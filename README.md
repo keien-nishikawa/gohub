@@ -24,7 +24,7 @@ http://localhost:8000
 **API Application**
 http://localhost:8080
 
-### How to use PgAdmin4
+### How to use pgAdmin4
 
 1. access to url => http://localhost:8000
 2. Login Info: gohub.api@sample.com/gohub_password
