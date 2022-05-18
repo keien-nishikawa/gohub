@@ -3,3 +3,4 @@ tmp
 # ignore generate files to run 「cosmtrek/air」
 app
 .env
+log/develop.log
