@@ -1,7 +1,6 @@
 package model
 
 import (
-	"log"
 	"time"
 )
 
@@ -14,6 +13,6 @@ type User struct {
 	updatedAt time.Time
 }
 
-func Username(){
-	log.Print("username: keien-nishikawa")
+func Username() string{
+	return "keien-nishikawa"
 }

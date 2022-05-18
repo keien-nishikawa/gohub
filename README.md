@@ -44,6 +44,10 @@ http://localhost:8080
       - Save Password: check <= as you like, but recommend to check
 5. done
 
+### Logs
+
+rename log/develop.log.sample to log/develop.log
+
 ## Docker
 
 ### 「gohub api」のコンテナにアクセスする方法
