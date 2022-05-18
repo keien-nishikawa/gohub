@@ -20,8 +20,25 @@ docker volume up
 
 **SQL Client Tool**
 http://localhost:8000
+
 **API Application**
 http://localhost:8080
+
+### How to use PgAdmin4
+
+1. access to url => http://localhost:8000
+2. Login Info: gohub.api@sample.com/gohub_password
+3. Click to [Add New Server]
+4. Input info
+   **General**
+   name: gohub_dev
+   **Connection**
+   Host name/address: gohub_db
+   Port: 5432
+   Maintenance database: postgres
+   Username: postgres
+   Password: gohub_dev_password
+   Save Password: check <= as you like, but recommend to check
 
 ## Docker
 
