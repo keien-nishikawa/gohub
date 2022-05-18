@@ -5,11 +5,17 @@ import (
 	"gohub/cmd/util"
 	"log"
 	"net/http"
+	"os"
 )
 
 func main() {
 	// config logging
-	util.LoggingSettings("./log/develop.log")
+	env_type := os.Getenv("ENV_TYPE")
+	if env_type == "production" {
+		util.LoggingSettings("./log/production.log")
+	} else {
+		util.LoggingSettings("./log/develop.log")
+	}
 	// config routeing
 	router.SetRouter()
 	// error handling
