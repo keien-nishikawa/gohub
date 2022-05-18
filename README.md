@@ -12,8 +12,11 @@ Go のバージョンは 1.18
 
 ```bash
 docker compose build
-docker volume create pgadmin4_volume
 docker volume up
+
+# options
+## as you like to down compose
+docker-compose down --rmi all --volumes --remove-orphans
 ```
 
 ### URL
