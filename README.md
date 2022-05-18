@@ -30,15 +30,15 @@ http://localhost:8080
 2. Login Info: gohub.api@sample.com/gohub_password
 3. Click to [Add New Server]
 4. Input info
-   **General**
-   name: gohub_dev
-   **Connection**
-   Host name/address: gohub_db
-   Port: 5432
-   Maintenance database: postgres
-   Username: postgres
-   Password: gohub_dev_password
-   Save Password: check <= as you like, but recommend to check
+   1. **General**
+      - name: gohub_dev
+   2. **Connection**
+      - Host name/address: gohub_db
+      - Port: 5432
+      - Maintenance database: postgres
+      - Username: postgres
+      - Password: gohub_dev_password
+      - Save Password: check <= as you like, but recommend to check
 
 ## Docker
 
