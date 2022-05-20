@@ -11,4 +11,4 @@ CREATE SCHEMA gohub_dev_schema;
 CREATE ROLE gohub WITH LOGIN PASSWORD 'gohub_dev_password';
 
 -- 権限追加
-GRANT ALL PRIVILEGES ON SCHEMA gohub_dev_schema TO gohub;
+GRANT ALL PRIVILEGES ON SCHEMA gohub_dev_schema, table_name TO gohub;
